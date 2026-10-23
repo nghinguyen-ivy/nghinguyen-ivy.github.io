@@ -223,6 +223,14 @@ h1,h2,h3,h4{font-family:var(--f-head);color:var(--ink);font-weight:600;letter-sp
 .contact-list a{color:var(--deep-fg);text-decoration-color:rgba(200,169,107,.7);text-underline-offset:4px}
 .contact-list a:hover{text-decoration-color:var(--accent)}
 .deep .ctas{justify-content:center}
+/* S9: portrait left, text right */
+.deep{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:clamp(28px,4.5vw,64px);align-items:center;padding:clamp(20px,3vw,40px) clamp(20px,4.5vw,64px) clamp(20px,3vw,40px) clamp(20px,3vw,40px)}
+.deep::before{left:20%;top:8%;width:60%;height:84%}
+.deep .frame{aspect-ratio:4/5;max-height:none;max-width:none;width:100%;margin:0}
+.deep-copy{text-align:left;max-width:620px;margin:0;padding:clamp(4px,1.5vw,20px) 0}
+.deep .contact-list{justify-content:flex-start;margin:34px 0 0}
+.deep .ctas{justify-content:flex-start}
+@media (max-width:900px){.deep{grid-template-columns:1fr;padding:clamp(20px,4vw,32px)}.deep .frame{max-width:440px}}
 .deep :focus-visible{outline-color:var(--accent)}
 footer{text-align:center;font-size:13px;color:var(--muted);padding:0 20px 32px}
 
@@ -234,6 +242,22 @@ dialog.lb::backdrop{background:rgba(10,20,32,.86);-webkit-backdrop-filter:blur(6
 .lb-bar .n{font:500 14px/1 var(--f-body);font-variant-numeric:tabular-nums;color:#F7F5EF}
 .lb-bar .grp{display:flex;gap:8px}
 .lb .btn{min-height:44px}
+
+/* ---------- Email chooser ---------- */
+dialog.em{border:1px solid var(--line);border-radius:24px;padding:28px;width:min(480px,92vw);background:var(--surface);color:var(--text);box-shadow:var(--shadow-img)}
+dialog.em::backdrop{background:rgba(10,20,32,.6);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.em-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:6px}
+.em-head h2{font-size:24px;line-height:1.3}
+.em-x{all:unset;cursor:pointer;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:var(--ink);flex:none;margin:-6px -8px 0 0}
+.em-x:hover{background:var(--line)}
+.em-x:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.em-note{color:var(--muted);font-size:15px;margin-bottom:18px}
+.em-addr{display:flex;gap:8px}
+.em-addr input{flex:1;min-width:0;min-height:48px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 16px/1.4 var(--f-body);padding:0 14px}
+.em-status{min-height:1.5em;font-size:14px;color:var(--ink);margin:8px 0 14px}
+.em-opts{display:grid;gap:10px}
+.em-opts .btn{width:100%}
+@media (max-width:440px){.em-addr{flex-direction:column}}
 
 /* ---------- Resume viewer ---------- */
 [hidden]{display:none!important}
@@ -507,18 +531,18 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
 <section class="slide" id="contact" data-label="Let’s Connect">
   <div class="wrap">
     <div class="deep">
-      <div class="frame"><img src="images/bridge-team.jpg" alt="Three team members holding the wooden truss bridge prototype" loading="lazy"></div>
+      <div class="frame"><img src="images/portrait.jpg" alt="Portrait of Gia Nghi Nguyen in front of an Iron Range Engineering backdrop" loading="lazy"></div>
       <div class="deep-copy">
         <h2>Let’s Connect</h2>
         <p>I’m seeking a full-time electrical engineering or manufacturing engineering internship or co-op, with opportunities to support testing, equipment, and process improvement.</p>
         <p>I bring experience coordinating technical work, organizing data, and building prototypes. I’m ready to contribute those skills while learning from engineers and production teams.</p>
         <ul class="contact-list">
-          <li>Email: <a href="mailto:nghiivy2907@gmail.com">nghiivy2907@gmail.com</a></li>
+          <li>Email: <a class="email-link" href="mailto:nghiivy2907@gmail.com?subject=Internship%20opportunity" aria-haspopup="dialog">nghiivy2907@gmail.com</a></li>
           <li>LinkedIn: <a href="https://www.linkedin.com/in/nghi297" target="_blank" rel="noopener noreferrer">linkedin.com/in/nghi297</a></li>
         </ul>
         <div class="ctas">
           <a class="btn btn-champ resume-link" href="#" aria-haspopup="dialog">Review My Resume</a>
-          <a class="btn btn-line" href="mailto:nghiivy2907@gmail.com">Email Me</a>
+          <a class="btn btn-line email-link" href="mailto:nghiivy2907@gmail.com?subject=Internship%20opportunity" aria-haspopup="dialog">Email Me</a>
         </div>
       </div>
     </div>
@@ -526,6 +550,24 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
 </section>
 </main>
 <footer>© 2026 Gia Nghi Nguyen</footer>
+
+<dialog class="em" id="em" aria-labelledby="emTitle">
+  <div class="em-head">
+    <h2 id="emTitle">Email Gia Nghi</h2>
+    <button class="em-x" id="emClose" type="button" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <p class="em-note">Copy the address, or open a new email in the app you use.</p>
+  <div class="em-addr">
+    <input id="emAddr" type="text" readonly value="nghiivy2907@gmail.com" aria-label="Email address">
+    <button class="btn btn-primary" id="emCopy" type="button">Copy email</button>
+  </div>
+  <p class="em-status" id="emStatus" aria-live="polite"></p>
+  <div class="em-opts">
+    <a class="btn btn-ghost" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=nghiivy2907@gmail.com&amp;su=Internship%20opportunity" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
+    <a class="btn btn-ghost" href="https://outlook.office.com/mail/deeplink/compose?to=nghiivy2907@gmail.com&amp;subject=Internship%20opportunity" target="_blank" rel="noopener noreferrer">Open in Outlook</a>
+    <a class="btn btn-ghost" href="mailto:nghiivy2907@gmail.com?subject=Internship%20opportunity">Open email app</a>
+  </div>
+</dialog>
 
 <dialog class="rd" id="rd" aria-labelledby="rdTitle">
   <div class="rd-bar">
@@ -555,6 +597,30 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
 
 <script>
 (function(){
+  /* Email chooser */
+  var em = document.getElementById('em'), emAddr = document.getElementById('emAddr'), emStatus = document.getElementById('emStatus'), emOpener = null;
+  document.querySelectorAll('.email-link').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if (!em.showModal) return;
+      e.preventDefault(); emOpener = a; emStatus.textContent = '';
+      em.showModal(); document.getElementById('emCopy').focus();
+    });
+  });
+  document.getElementById('emClose').addEventListener('click', function(){ em.close(); });
+  em.addEventListener('close', function(){ if (emOpener) emOpener.focus(); });
+  em.addEventListener('click', function(e){ if (e.target === em) em.close(); });
+  em.querySelectorAll('.em-opts a').forEach(function(a){ a.addEventListener('click', function(){ setTimeout(function(){ em.close(); }, 150); }); });
+  function copied(){ emStatus.textContent = 'Copied. Paste it into the “To” field of your email.'; }
+  function fallbackCopy(){
+    emAddr.focus(); emAddr.select(); emAddr.setSelectionRange(0, emAddr.value.length);
+    var ok = false; try { ok = document.execCommand('copy'); } catch (err) {}
+    emStatus.textContent = ok ? 'Copied. Paste it into the “To” field of your email.' : 'Address selected. Press Ctrl+C (or ⌘+C) to copy it.';
+  }
+  document.getElementById('emCopy').addEventListener('click', function(){
+    if (navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(emAddr.value).then(copied, fallbackCopy); }
+    else fallbackCopy();
+  });
+
   /* Resume viewer */
   var rd = document.getElementById('rd'), rdStatus = document.getElementById('rdStatus');
   var rdOpener = null;
