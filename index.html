@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gia Nghi Nguyen — Electrical Engineering Student</title>
+<meta name="description" content="Gia Nghi Nguyen, electrical engineering student at Minnesota State University, Mankato’s Iron Range Engineering program, seeking a manufacturing engineering internship or co-op.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gia Nghi Nguyen — Electrical Engineering Student">
+<meta property="og:description" content="Electrical Engineering Student | Interested in Manufacturing">
+<meta property="og:image" content="images/milling-equipment.jpg">
+<meta name="theme-color" content="#17324D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#F7F5EF; --surface:#FFFFFF; --ink:#17324D; --text:#28323C; --muted:#56616C;
+  --line:rgba(23,50,77,.12); --accent:#C8A96B; --steel:#7196B3;
+  --primary-bg:#17324D; --primary-fg:#F7F5EF;
+  --deep:#17324D; --deep-fg:#F7F5EF; --deep-muted:rgba(247,245,239,.78); --deep-line:rgba(247,245,239,.16);
+  --glass:rgba(247,245,239,.82); --doc-bg:#EDF0F2; --tile:#F1EEE6;
+  --shadow-card:0 12px 36px rgba(23,50,77,.06);
+  --shadow-img:0 20px 56px rgba(23,50,77,.12);
+  --shadow-head:0 8px 28px rgba(23,50,77,.07);
+  --glow-c:0 0 28px rgba(200,169,107,.14);
+  --glow-s:0 0 24px rgba(113,150,179,.12);
+  --f-head:"Manrope", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"Be Vietnam Pro", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#0F1B27; --surface:#152331; --ink:#F2EEE4; --text:#CBD2D9; --muted:#9BA7B3;
+    --line:rgba(242,238,228,.12);
+    --primary-bg:#F2EEE4; --primary-fg:#17324D;
+    --deep:#17324D; --deep-line:rgba(247,245,239,.16);
+    --glass:rgba(15,27,39,.80); --doc-bg:#1B2B3C; --tile:#1B2B3C;
+    --shadow-card:0 12px 36px rgba(0,0,0,.28);
+    --shadow-img:0 20px 56px rgba(0,0,0,.38);
+    --shadow-head:0 8px 28px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#0F1B27; --surface:#152331; --ink:#F2EEE4; --text:#CBD2D9; --muted:#9BA7B3;
+  --line:rgba(242,238,228,.12);
+  --primary-bg:#F2EEE4; --primary-fg:#17324D;
+  --deep:#17324D; --deep-line:rgba(247,245,239,.16);
+  --glass:rgba(15,27,39,.80); --doc-bg:#1B2B3C; --tile:#1B2B3C;
+  --shadow-card:0 12px 36px rgba(0,0,0,.28);
+  --shadow-img:0 20px 56px rgba(0,0,0,.38);
+  --shadow-head:0 8px 28px rgba(0,0,0,.3);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+h1,h2,h3,h4{font-family:var(--f-head);color:var(--ink);font-weight:600;letter-spacing:-.025em;margin:0}
+:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:6px}
+.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--primary-bg);color:var(--primary-fg);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+.skip:focus{top:calc(16px + env(safe-area-inset-top,0px))}
+
+/* ---------- Header ---------- */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(16px + env(safe-area-inset-top,0px)) clamp(12px,3vw,32px) 0;pointer-events:none}
+.bar{pointer-events:auto;max-width:1280px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 10px 0 22px;border-radius:18px;background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(120%);backdrop-filter:blur(20px) saturate(120%);border:1px solid var(--line);box-shadow:var(--shadow-head)}
+.brand{font-family:var(--f-head);font-weight:600;font-size:16px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.spy{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.spy button{all:unset;cursor:pointer;position:relative;display:grid;place-items:center;width:40px;height:36px;border-radius:10px;font:500 13px/1 var(--f-body);font-variant-numeric:tabular-nums;color:var(--muted);transition:background .2s,color .2s}
+.spy button:hover{color:var(--ink);background:var(--line)}
+.spy button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.spy button[aria-current="true"]{background:var(--primary-bg);color:var(--primary-fg)}
+.spy button[aria-current="true"]::after{content:"";position:absolute;bottom:5px;width:4px;height:4px;border-radius:50%;background:var(--accent)}
+.spy button .tip{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow-card);font:500 13px/1.5 var(--f-body);padding:4px 10px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .15s}
+.spy button:hover .tip,.spy button:focus-visible .tip{opacity:1}
+.hdr-right{display:flex;align-items:center;gap:10px}
+.count{display:none;font:500 14px/1 var(--f-body);font-variant-numeric:tabular-nums;color:var(--ink)}
+.hdr .menu-btn{display:none}
+.menu{display:none}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:12px;font:600 15px/1.5 var(--f-body);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .2s ease,box-shadow .2s ease,background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--primary-bg);color:var(--primary-fg)}
+.btn-primary:hover{box-shadow:var(--glow-s),0 10px 24px rgba(23,50,77,.18)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--line)}
+.btn-sm{min-height:44px;padding:0 16px;font-size:14px}
+.btn-champ{background:var(--accent);color:#17324D}
+.btn-champ:hover{box-shadow:0 0 28px rgba(200,169,107,.35)}
+.btn-line{background:transparent;color:var(--deep-fg);border-color:rgba(247,245,239,.5)}
+.btn-line:hover{background:rgba(247,245,239,.08)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:1280px;margin:0 auto;padding-inline:clamp(20px,4.5vw,64px)}
+.slide{padding-block:clamp(56px,8.5vw,112px);scroll-margin-top:104px;position:relative}
+.slide-title{font-size:clamp(30px,4.4vw,56px);line-height:1.18;margin-bottom:clamp(28px,4vw,48px)}
+.card-title{font-size:clamp(22px,2vw,27px);line-height:1.3}
+.meta{font:500 15px/1.5 var(--f-body);color:var(--muted);margin-top:8px;font-variant-numeric:tabular-nums}
+.frame{position:relative;border-radius:20px;overflow:hidden;background:var(--tile)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.r45{aspect-ratio:4/5}.r43{aspect-ratio:4/3}.r11{aspect-ratio:1/1}.r169{aspect-ratio:16/9}
+.doc{background:var(--doc-bg);padding:clamp(14px,2vw,22px)}
+.doc img{object-fit:contain;border-radius:6px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow-card);padding:clamp(24px,3vw,40px)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow-card);padding:clamp(22px,2.4vw,32px)}
+.measure{max-width:66ch}
+
+/* ---------- S1 Hero ---------- */
+#home{padding-top:clamp(132px,15vw,176px);overflow:hidden}
+#home::before{content:"";position:absolute;right:-12%;top:4%;width:62vw;height:62vw;max-width:880px;max-height:880px;border-radius:50%;background:radial-gradient(closest-side,rgba(200,169,107,.07),transparent);pointer-events:none}
+.hero{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero h1{font-size:clamp(44px,8.2vw,108px);line-height:1.12;letter-spacing:-.035em;font-weight:600}
+.hero .sub{font:500 clamp(17px,1.6vw,20px)/1.5 var(--f-head);color:var(--ink);margin:22px 0 28px;letter-spacing:-.01em;padding-left:16px;border-left:2px solid var(--accent)}
+.hero-media{position:relative;padding-left:34px}
+.hero-media .frame{box-shadow:var(--shadow-img),var(--glow-c)}
+/* measuring scale – the one decorative device: a mesh-sieve style ruler */
+.scale{position:absolute;left:0;top:6%;bottom:6%;width:22px;
+  background:
+   repeating-linear-gradient(to bottom,var(--accent) 0 1.5px,transparent 1.5px 60px) right top/22px 100% no-repeat,
+   repeating-linear-gradient(to bottom,var(--accent) 0 1px,transparent 1px 12px) right top/10px 100% no-repeat;
+  opacity:.85;border-right:1px solid var(--accent)}
+@media (prefers-reduced-motion: no-preference){
+  .hero-copy > *{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy > *:nth-child(2){animation-delay:.08s}
+  .hero-copy > *:nth-child(3){animation-delay:.16s}
+  .hero-copy > *:nth-child(4){animation-delay:.22s}
+  .hero-copy > *:nth-child(5){animation-delay:.28s}
+  .scale{animation:draw 1.1s .2s cubic-bezier(.2,.7,.2,1) both;transform-origin:top}
+  .hero-media .frame{animation:fade 1s .1s ease both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes draw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+/* ---------- S2 / S3 split ---------- */
+.split{display:grid;gap:clamp(24px,3vw,40px);align-items:start}
+.split-about{grid-template-columns:minmax(0,4fr) minmax(0,6fr)}
+.split-about .frame{box-shadow:var(--shadow-img)}
+.split-proj{grid-template-columns:minmax(0,6fr) minmax(0,4fr)}
+.proj-head{padding-bottom:24px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.proj-head h3{font-size:clamp(24px,2.4vw,32px);line-height:1.25}
+.blk{padding:24px 0;border-bottom:1px solid var(--line)}
+.blk:last-of-type{border-bottom:0;padding-bottom:4px}
+.blk h4{font-size:18px;line-height:1.4;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.blk h4::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--accent);flex:none}
+.ticks{list-style:none;margin:0;padding:0}
+.ticks li{position:relative;padding-left:24px;margin-bottom:10px}
+.ticks li:last-child{margin-bottom:0}
+.ticks li::before{content:"";position:absolute;left:2px;top:.78em;width:12px;height:1.5px;background:var(--accent)}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:sticky;top:104px}
+.gallery .wide{grid-column:1/-1;box-shadow:var(--shadow-img)}
+.gallery .frame:not(.wide){box-shadow:var(--shadow-card)}
+.gallery button{all:unset;cursor:zoom-in;display:block;border-radius:20px}
+.gallery button:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.gallery button img{transition:transform .5s ease}
+.gallery button:hover img{transform:scale(1.03)}
+@media (min-width:1024px){
+  .scrolly{max-height:calc(100vh - 150px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+  .scrolly::-webkit-scrollbar{width:8px}
+  .scrolly::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+}
+
+/* ---------- S4 ---------- */
+.showcase{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:clamp(28px,4vw,64px);align-items:center}
+.showcase h3{font-size:clamp(24px,2.4vw,32px);line-height:1.25}
+.showcase .meta{margin-bottom:26px}
+.rule{width:56px;height:2px;background:var(--accent);margin:0 0 26px;border:0}
+.showcase .frame{box-shadow:var(--shadow-img)}
+.showcase{grid-template-areas:"text paper" "text cert";row-gap:20px;align-items:start}
+.showcase > div:first-child{grid-area:text;align-self:center}
+.showcase .paper{grid-area:paper;aspect-ratio:4/3}
+.showcase .paper img{object-position:center top}
+.showcase .s4-cert{grid-area:cert;aspect-ratio:4/3;box-shadow:var(--shadow-img);padding:0}
+.showcase .s4-cert img{object-fit:cover;border-radius:0}
+@media (max-width:900px){.showcase{grid-template-areas:"text" "paper" "cert"}}
+
+/* ---------- S5 / S7 twin cards ---------- */
+.twin{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.twin .card{display:flex;flex-direction:column;gap:22px}
+.twin .card .frame{border-radius:16px}
+.twin .card p{margin:0}
+.twin .card .meta{margin:4px 0 12px}
+#prototypes{padding-top:0}
+
+/* ---------- S6 Bento ---------- */
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.bento .card{display:flex;flex-direction:column}
+.bento .top{min-height:230px}
+.ico{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;border:1px solid var(--line);background:var(--bg);color:var(--ink);margin-bottom:24px}
+.ico svg{width:30px;height:30px}
+.bento .card:first-child .ico{box-shadow:var(--glow-c);border-color:rgba(200,169,107,.5)}
+.bento h3{margin-bottom:10px}
+
+/* ---------- S8 Education ---------- */
+.edu{display:grid;gap:24px}
+.edu .card{display:grid;grid-template-columns:120px minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:start}
+.mono{aspect-ratio:1/1;border-radius:20px;display:grid;place-items:center;border:1px solid var(--line);background:var(--bg);font:700 22px/1 var(--f-head);letter-spacing:-.02em;color:var(--ink);position:relative}
+.mono::after{content:"";position:absolute;left:22%;right:22%;bottom:22%;height:2px;background:var(--accent)}
+.edu .first{padding-block:clamp(28px,3vw,40px)}
+.edu .dates{font:500 15px/1.5 var(--f-body);color:var(--ink);font-variant-numeric:tabular-nums;margin:14px 0 6px}
+
+/* ---------- S9 Contact ---------- */
+#contact{padding-bottom:clamp(40px,6vw,72px)}
+.deep{background:var(--deep);color:var(--deep-fg);border-radius:32px;padding:clamp(20px,3vw,40px);border:1px solid var(--deep-line);position:relative;overflow:hidden}
+.deep::before{content:"";position:absolute;left:50%;top:18%;width:70%;height:60%;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(200,169,107,.16),transparent);pointer-events:none}
+.deep .frame{position:relative;box-shadow:0 24px 60px rgba(0,0,0,.28);max-height:440px;aspect-ratio:16/9;margin:0 auto;max-width:880px}
+.deep-copy{position:relative;text-align:center;max-width:660px;margin:0 auto;padding:clamp(36px,5vw,64px) 0 clamp(16px,3vw,32px)}
+.deep h2{color:var(--deep-fg);font-size:clamp(34px,5vw,64px);line-height:1.18;margin-bottom:28px}
+.deep p{color:var(--deep-muted)}
+.contact-list{list-style:none;margin:34px auto 0;padding:22px 0;border-top:1px solid var(--deep-line);border-bottom:1px solid var(--deep-line);display:flex;flex-wrap:wrap;justify-content:center;gap:10px 40px;font-size:16px}
+.contact-list a{color:var(--deep-fg);text-decoration-color:rgba(200,169,107,.7);text-underline-offset:4px}
+.contact-list a:hover{text-decoration-color:var(--accent)}
+.deep .ctas{justify-content:center}
+.deep :focus-visible{outline-color:var(--accent)}
+footer{text-align:center;font-size:13px;color:var(--muted);padding:0 20px 32px}
+
+/* ---------- Lightbox ---------- */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1040px,94vw);width:100%;color:var(--deep-fg)}
+dialog.lb::backdrop{background:rgba(10,20,32,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.lb-img{width:100%;max-height:76vh;object-fit:contain;border-radius:16px;background:#0b1622}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
+.lb-bar .n{font:500 14px/1 var(--f-body);font-variant-numeric:tabular-nums;color:#F7F5EF}
+.lb-bar .grp{display:flex;gap:8px}
+.lb .btn{min-height:44px}
+
+/* ---------- Resume viewer ---------- */
+[hidden]{display:none!important}
+dialog.rd{border:0;padding:0;background:transparent;width:min(880px,94vw);max-width:none;max-height:none;overflow:visible}
+dialog.rd::backdrop{background:rgba(10,20,32,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.rd-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.rd-bar h2{color:#F7F5EF;font-size:20px;line-height:1.3}
+.rd-bar .grp{display:flex;gap:8px;align-items:center}
+.rd-status{color:#F7F5EF;font-size:14px}
+.rd-page{max-height:calc(100vh - 120px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));overflow:auto;border-radius:16px;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.rd-page img{width:100%;height:auto}
+.rd-page:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+dialog.rd :focus-visible{outline-color:var(--accent)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .spy{display:none}
+  .count{display:inline}
+  .hdr .menu-btn{display:inline-flex}
+  .menu{position:absolute;right:0;top:calc(100% + 10px);width:min(320px,calc(100vw - 24px));background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-img);padding:8px;list-style:none;margin:0}
+  .menu.open{display:block}
+  .menu button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;gap:14px;align-items:center;padding:11px 14px;border-radius:12px;font:500 15px/1.5 var(--f-body);color:var(--text)}
+  .menu button .num{font-variant-numeric:tabular-nums;color:var(--muted);width:22px}
+  .menu button:hover{background:var(--line)}
+  .menu button[aria-current="true"]{background:var(--primary-bg);color:var(--primary-fg)}
+  .menu button[aria-current="true"] .num{color:var(--accent)}
+  .menu button:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+  .hdr-right{position:relative}
+}
+@media (max-width:900px){
+  body{font-size:16px}
+  .hero,.split-about,.split-proj,.showcase,.twin,.bento{grid-template-columns:1fr}
+  .hero-media{max-width:460px;padding-left:28px}
+  .gallery{position:static}
+  .bento .top{min-height:0}
+  .showcase .frame{max-width:520px}
+  .split-about .frame{max-width:520px}
+}
+@media (max-width:560px){
+  .bar{padding:0 8px 0 16px;gap:8px}
+  .hdr .btn-contact{display:none}
+  .edu .card{grid-template-columns:72px minmax(0,1fr)}
+  .mono{font-size:15px;border-radius:14px}
+  .ctas .btn{flex:1 1 auto}
+  .twin,.bento{gap:16px}
+  .deep{border-radius:24px}
+}
+@media (min-width:561px){ .hdr .btn-contact{display:inline-flex} }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="bar">
+    <a class="brand" href="#home" data-go="home">Gia Nghi Nguyen</a>
+    <nav aria-label="Sections"><ul class="spy" id="spy"></ul></nav>
+    <div class="hdr-right">
+      <span class="count" aria-live="polite"><span id="countNow">01</span> / 09</span>
+      <button class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul class="menu" id="menu" aria-label="Sections"></ul>
+      <a class="btn btn-primary btn-sm btn-contact" href="#contact" data-go="contact">Contact Me</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- S1 -->
+<section class="slide" id="home" data-label="Home">
+  <div class="wrap hero">
+    <div class="hero-copy">
+      <h1>Gia Nghi Nguyen</h1>
+      <p class="sub">Electrical Engineering Student | Interested in Manufacturing</p>
+      <p class="measure">I’m an engineering student with an electrical engineering focus at Minnesota State University, Mankato’s Iron Range Engineering program. My experience includes leading engineering projects, planning experiments, analyzing data, and building physical prototypes.</p>
+      <p class="measure">I’m seeking a full-time engineering internship or co-op where I can contribute to manufacturing projects and gain practical experience with electrical systems and production equipment.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#featured-project" data-go="featured-project">View My Projects</a>
+        <a class="btn btn-ghost resume-link" href="#" aria-haspopup="dialog">Review My Resume</a>
+        <a class="btn btn-ghost" href="#contact" data-go="contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <span class="scale" aria-hidden="true"></span>
+      <div class="frame r45"><img id="img-hero" src="images/hero-sieve-shaker.jpg" alt="Sieve shaker with a stack of mesh sieves, set up outdoors on campus" fetchpriority="high"></div>
+    </div>
+  </div>
+</section>
+
+<!-- S2 -->
+<section class="slide" id="about" data-label="About Me">
+  <div class="wrap split split-about">
+    <div class="frame r45"><img id="img-about" src="images/ore-samples.jpg" alt="Rock and ore samples with labeled sample jars on a lab shelf" loading="lazy"></div>
+    <div class="panel scrolly" tabindex="0" aria-label="About Me">
+      <h2 class="slide-title">About Me</h2>
+      <div class="measure">
+        <p>I’m interested in how electrical engineering helps manufacturing equipment operate reliably and how measurements can guide process improvements.</p>
+        <p>Through project work, I’m learning to turn an open-ended problem into a clear plan, identify what needs to be measured, and use evidence to compare options. As project manager for Ultrasonic Milling for Legacy Iron, I coordinate team responsibilities, develop experimental plans, and organize technical information for client discussions.</p>
+        <p>Previously, I served as project manager and a design and testing team member on a science and technology project exploring paper production from the soft white inner peel of grapefruit.</p>
+        <p>I want to bring these experiences into a manufacturing environment while developing my knowledge of electrical controls and automation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 -->
+<section class="slide" id="featured-project" data-label="Featured Project">
+  <div class="wrap split split-proj">
+    <div class="panel scrolly" tabindex="0" aria-label="Featured Project">
+      <h2 class="slide-title">Featured Project</h2>
+      <div class="proj-head">
+        <h3>Ultrasonic Milling for Legacy Iron</h3>
+        <p class="meta">Project Manager | September 2026–Present</p>
+      </div>
+      <div class="blk measure">
+        <h4>The engineering question</h4>
+        <p>Our team is evaluating ultrasonic milling against conventional ball milling for hematite ore. The comparison considers particle-size distribution, energy use, and process efficiency.</p>
+      </div>
+      <div class="blk measure">
+        <h4>My contribution</h4>
+        <ul class="ticks">
+          <li>Lead a five-person team, coordinating project scope, responsibilities, client questions, and technical deliverables.</li>
+          <li>Develop an experimental plan around solids concentration, flow rate, and exposure time.</li>
+          <li>Plan particle-size comparisons using sieve analysis and mass measurements.</li>
+          <li>Organize test data and engineering comparisons in Microsoft Excel, including considerations around recirculation and energy use.</li>
+        </ul>
+      </div>
+      <div class="blk measure">
+        <h4>Current status</h4>
+        <p>The project is ongoing. Our work focuses on developing the experimental plan and organizing the measurements needed to support a meaningful comparison.</p>
+      </div>
+      <div class="blk measure">
+        <h4>What I’m learning</h4>
+        <p>A useful process comparison depends on consistent test conditions and clear documentation. This project is helping me connect engineering decisions with practical constraints and communicate what the available evidence supports.</p>
+      </div>
+      <div class="ctas" style="margin-top:20px">
+        <button class="btn btn-primary" id="detailsBtn" type="button" aria-haspopup="dialog">View Project Details</button>
+      </div>
+    </div>
+    <div class="gallery">
+      <button class="wide" type="button" data-shot="0" aria-label="Open project photo 1 of 5"><div class="frame r43"><img id="img-mill" src="images/milling-equipment.jpg" alt="Milling equipment with cabling and generator units in the project workshop" loading="lazy"></div></button>
+      <button type="button" data-shot="1" aria-label="Open project photo 2 of 5"><div class="frame r11"><img id="img-sieve" src="images/sieve-analysis.jpg" alt="Sieve shaker with a sieve stack in the workshop" loading="lazy"></div></button>
+      <button type="button" data-shot="2" aria-label="Open project photo 3 of 5"><div class="frame r11"><img id="img-ore" src="images/ore-in-tank.jpg" alt="Ore material inside a container" loading="lazy"></div></button>
+    </div>
+  </div>
+</section>
+
+<!-- S4 -->
+<section class="slide" id="additional-projects" data-label="Additional Projects">
+  <div class="wrap">
+    <h2 class="slide-title">Additional Projects</h2>
+    <div class="showcase">
+      <div>
+        <h3>Paper Production from Grapefruit Peel</h3>
+        <p class="meta">Science and Technology Project | Project Manager &amp; Design and Testing Team Member</p>
+        <hr class="rule">
+        <div class="measure">
+          <p>Participated in a science and technology project exploring paper production using grapefruit pith, the soft white inner layer of the peel. As project manager, I helped coordinate the team’s work while contributing directly to the design and testing activities.</p>
+          <p>This project gave me experience working on a materials-based production process and combining project coordination with hands-on technical work.</p>
+        </div>
+      </div>
+      <div class="frame r45 paper"><img src="images/grapefruit-paper.jpg" alt="Handmade sheet of paper made from grapefruit pith, showing its fibrous texture and torn edges" loading="lazy"></div>
+      <div class="frame doc s4-cert"><img src="images/grapefruit-project-certificate.jpg" alt="Framed award certificate from the 2023 Biên Hòa City youth creativity contest for the grapefruit peel paper project" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- S5 -->
+<section class="slide" id="prototypes" data-label="Prototypes">
+  <div class="wrap twin">
+    <article class="card">
+      <div class="frame r11"><img src="images/wooden-bridge.jpg" alt="Wooden truss bridge prototype mounted in a load-testing machine" loading="lazy"></div>
+      <div>
+        <h2 class="card-title">Wooden Bridge Prototype</h2>
+        <p class="meta">Fabrication &amp; Assembly</p>
+        <p>Built and assembled a wooden bridge prototype using measuring and basic woodworking tools. I checked alignment and fit during construction and adjusted design and assembly decisions to improve stability and build quality.</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="frame r11"><img src="images/desk-organizer.jpg" alt="Laser-cut wooden desk organizer with two pen compartments and a front phone or tablet stand, engraved WCC" loading="lazy"></div>
+      <div>
+        <h2 class="card-title">Multifunctional Desk Organizer</h2>
+        <p class="meta">Design &amp; Prototyping</p>
+        <p>Built a wooden pen holder with a phone or tablet stand. I selected dimensions and support geometry to balance storage, stability, and usability, translating a practical need into a physical prototype.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- S6 -->
+<section class="slide" id="skills" data-label="Technical Skills">
+  <div class="wrap">
+    <h2 class="slide-title">Technical Skills</h2>
+    <div class="bento">
+      <div class="card top">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20v-5"/><path d="M10 20V9"/><path d="M14 20v-7"/><path d="M18 20V5"/><path d="M4 11l5-5 4 4 7-7"/></svg></span>
+        <h3 class="card-title">Engineering &amp; Analysis</h3>
+        <p>Experimental planning, sieve analysis, measurement, data organization, prototyping, and basic fabrication.</p>
+      </div>
+      <div class="card top">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9.5h18"/><path d="M3 14.5h18"/><path d="M9 4v16"/></svg></span>
+        <h3 class="card-title">Software &amp; Tools</h3>
+        <p>Microsoft Excel, Word, PowerPoint, and Project Professional; Google Docs, Sheets, and Slides.</p>
+      </div>
+      <div class="card">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/><path d="M10 13.5l1.5-3 1.5 3" /></svg></span>
+        <h3 class="card-title">Currently Learning</h3>
+        <p>AutoCAD and Arduino IDE.</p>
+      </div>
+      <div class="card">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v18"/><rect x="6" y="5" width="9" height="3.5" rx="1.2"/><rect x="9" y="10.5" width="10" height="3.5" rx="1.2"/><rect x="7" y="16" width="6" height="3.5" rx="1.2"/></svg></span>
+        <h3 class="card-title">Project Coordination</h3>
+        <p>Team responsibilities, deliverable tracking, client communication, and technical reporting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S7 -->
+<section class="slide" id="leadership" data-label="Leadership Experience">
+  <div class="wrap">
+    <h2 class="slide-title">Leadership Experience</h2>
+    <div class="twin">
+      <article class="card">
+        <div class="frame r43 doc"><img src="images/senate-certificate.jpg" alt="Certificate of Leadership awarded to Nghi Nguyen for representation and decision making on the ASWCC Senate at Whatcom Community College" loading="lazy"></div>
+        <div>
+          <h3 class="card-title">Student Senator</h3>
+          <p class="meta">Whatcom Community College</p>
+          <p>Represented student interests, gathered feedback on student needs, and contributed to campus discussions and collaborative decisions.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="frame r43 doc"><img src="images/engagement-certificate.jpg" alt="Certificate of Leadership awarded to Nghi Nguyen for the 2024–2025 Student Life Engagement Team at Whatcom Community College" loading="lazy"></div>
+        <div>
+          <h3 class="card-title">Engagement Team Member</h3>
+          <p class="meta">Whatcom Community College</p>
+          <p>Helped coordinate and promote student activities, working with teammates on event planning and outreach.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S8 -->
+<section class="slide" id="education" data-label="Education">
+  <div class="wrap">
+    <h2 class="slide-title">Education</h2>
+    <div class="edu">
+      <article class="card first">
+        <span class="mono" aria-hidden="true">MNSU</span>
+        <div>
+          <h3 class="card-title">Minnesota State University, Mankato</h3>
+          <p class="meta">Iron Range Engineering | Electrical Engineering Focus</p>
+          <p class="dates">August 2026–Present</p>
+          <p>Relevant coursework: Fluid Mechanics, Engineering Economics, and Project Management.</p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="mono" aria-hidden="true">WCC</span>
+        <div>
+          <h3 class="card-title">Whatcom Community College</h3>
+          <p class="meta">Associate of Science — Engineering Pathway</p>
+          <p class="dates">September 2023–June 2026</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S9 -->
+<section class="slide" id="contact" data-label="Let’s Connect">
+  <div class="wrap">
+    <div class="deep">
+      <div class="frame"><img src="images/bridge-team.jpg" alt="Three team members holding the wooden truss bridge prototype" loading="lazy"></div>
+      <div class="deep-copy">
+        <h2>Let’s Connect</h2>
+        <p>I’m seeking a full-time electrical engineering or manufacturing engineering internship or co-op, with opportunities to support testing, equipment, and process improvement.</p>
+        <p>I bring experience coordinating technical work, organizing data, and building prototypes. I’m ready to contribute those skills while learning from engineers and production teams.</p>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:nghiivy2907@gmail.com">nghiivy2907@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/nghi297" target="_blank" rel="noopener noreferrer">linkedin.com/in/nghi297</a></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-champ resume-link" href="#" aria-haspopup="dialog">Review My Resume</a>
+          <a class="btn btn-line" href="mailto:nghiivy2907@gmail.com">Email Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© 2026 Gia Nghi Nguyen</footer>
+
+<dialog class="rd" id="rd" aria-labelledby="rdTitle">
+  <div class="rd-bar">
+    <h2 id="rdTitle">Resume</h2>
+    <div class="grp">
+      <span class="rd-status" id="rdStatus" aria-live="polite"></span>
+      <a class="btn btn-champ btn-sm" href="resume.pdf" download="Nghi_Nguyen_Resume.pdf">Download PDF</a>
+      <button class="btn btn-line btn-sm" id="rdClose" type="button">Close</button>
+    </div>
+  </div>
+  <div class="rd-page" tabindex="0" aria-label="Resume page">
+    <img src="images/resume-preview.png" alt="Resume of Nghi Nguyen: professional summary, education, project experience, technical skills, and leadership and campus experience." width="1600" height="2071">
+  </div>
+</dialog>
+
+<dialog class="lb" id="lb" aria-label="Ultrasonic Milling for Legacy Iron project photos">
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <div class="lb-bar">
+    <span class="n"><span id="lbN">1</span> / <span id="lbT">5</span></span>
+    <div class="grp">
+      <button class="btn btn-line btn-sm" id="lbPrev" type="button">Previous photo</button>
+      <button class="btn btn-line btn-sm" id="lbNext" type="button">Next photo</button>
+      <button class="btn btn-champ btn-sm" id="lbClose" type="button">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  /* Resume viewer */
+  var rd = document.getElementById('rd'), rdStatus = document.getElementById('rdStatus');
+  var rdOpener = null;
+  document.querySelectorAll('.resume-link').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault(); rdOpener = a; rdStatus.textContent = '';
+      if (rd.showModal) rd.showModal(); else rd.setAttribute('open','');
+      document.getElementById('rdClose').focus();
+    });
+  });
+  document.getElementById('rdClose').addEventListener('click', function(){ rd.close ? rd.close() : rd.removeAttribute('open'); });
+  rd.addEventListener('close', function(){ if (rdOpener) rdOpener.focus(); });
+  rd.addEventListener('click', function(e){ if (e.target === rd) rd.close(); });
+
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main > .slide'));
+  var spy = document.getElementById('spy'), menu = document.getElementById('menu');
+  var menuBtn = document.getElementById('menuBtn'), countNow = document.getElementById('countNow');
+  var spyBtns = [], menuBtns = [];
+  var pad = function(n){ return (n < 10 ? '0' : '') + n; };
+
+  function go(id){
+    var el = document.getElementById(id); if(!el) return;
+    el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
+    var h = el.querySelector('h1,h2'); if (h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); }
+  }
+
+  sections.forEach(function(s, i){
+    var label = s.getAttribute('data-label');
+    var li = document.createElement('li'), b = document.createElement('button');
+    b.type = 'button'; b.setAttribute('aria-label', 'Go to ' + label);
+    b.innerHTML = pad(i+1) + '<span class="tip" aria-hidden="true">' + label + '</span>';
+    b.addEventListener('click', function(){ go(s.id); });
+    li.appendChild(b); spy.appendChild(li); spyBtns.push(b);
+
+    var mli = document.createElement('li'), mb = document.createElement('button');
+    mb.type = 'button';
+    mb.innerHTML = '<span class="num">' + pad(i+1) + '</span><span>' + label + '</span>';
+    mb.addEventListener('click', function(){ toggleMenu(false); go(s.id); });
+    mli.appendChild(mb); menu.appendChild(mli); menuBtns.push(mb);
+  });
+
+  document.querySelectorAll('[data-go]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); go(a.getAttribute('data-go')); });
+  });
+
+  function toggleMenu(open){
+    menu.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.textContent = open ? 'Close' : 'Menu';
+  }
+  menuBtn.addEventListener('click', function(){ toggleMenu(!menu.classList.contains('open')); });
+  document.addEventListener('click', function(e){ if (!e.target.closest('.hdr-right')) toggleMenu(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && menu.classList.contains('open')){ toggleMenu(false); menuBtn.focus(); } });
+
+  var current = -1, ticking = false;
+  function update(){
+    ticking = false;
+    var line = window.innerHeight * 0.38, idx = 0;
+    sections.forEach(function(s, i){ if (s.getBoundingClientRect().top <= line) idx = i; });
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 4) idx = sections.length - 1;
+    if (idx === current) return; current = idx;
+    spyBtns.forEach(function(b, i){ b.setAttribute('aria-current', i === idx ? 'true' : 'false'); });
+    menuBtns.forEach(function(b, i){ b.setAttribute('aria-current', i === idx ? 'true' : 'false'); });
+    countNow.textContent = pad(idx + 1);
+  }
+  window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(update); } }, {passive:true});
+  window.addEventListener('resize', update);
+  update();
+
+  if (location.hash && /^#[\w~.-]+$/.test(location.hash)){
+    var t = document.getElementById(location.hash.slice(1));
+    if (t && t.classList.contains('slide')) setTimeout(function(){ t.scrollIntoView(); }, 60);
+  }
+
+  /* Project photo viewer */
+  var shots = ['img-mill','img-sieve','img-ore','img-hero','img-about'].map(function(id){ return document.getElementById(id); });
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbN = document.getElementById('lbN');
+  document.getElementById('lbT').textContent = shots.length;
+  var at = 0, opener = null;
+  function show(i){ at = (i + shots.length) % shots.length; lbImg.src = shots[at].src; lbImg.alt = shots[at].alt; lbN.textContent = at + 1; }
+  function open(i, from){ opener = from; show(i); if (lb.showModal) lb.showModal(); else lb.setAttribute('open',''); document.getElementById('lbNext').focus(); }
+  document.getElementById('detailsBtn').addEventListener('click', function(e){ open(0, e.currentTarget); });
+  document.querySelectorAll('[data-shot]').forEach(function(b){ b.addEventListener('click', function(){ open(+b.getAttribute('data-shot'), b); }); });
+  document.getElementById('lbPrev').addEventListener('click', function(){ show(at - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(){ show(at + 1); });
+  document.getElementById('lbClose').addEventListener('click', function(){ lb.close ? lb.close() : lb.removeAttribute('open'); });
+  lb.addEventListener('close', function(){ if (opener) opener.focus(); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
+  lb.addEventListener('keydown', function(e){ if (e.key === 'ArrowRight') show(at + 1); if (e.key === 'ArrowLeft') show(at - 1); });
+})();
+</script>
+</body>
+</html>
