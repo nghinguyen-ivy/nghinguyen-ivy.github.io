@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gia Nghi Nguyen — Electrical Engineering Student</title>
-<meta name="description" content="Gia Nghi Nguyen, electrical engineering student at Minnesota State University, Mankato’s Iron Range Engineering program, seeking a manufacturing engineering internship or co-op.">
+<title>Nghi Nguyen — Engineering Student, Electrical Focus</title>
+<meta name="description" content="Nghi Nguyen, electrical engineering student at Minnesota State University, Mankato’s Iron Range Engineering program, seeking a manufacturing engineering internship or co-op.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gia Nghi Nguyen — Electrical Engineering Student">
-<meta property="og:description" content="Electrical Engineering Student | Interested in Manufacturing">
+<meta property="og:title" content="Nghi Nguyen — Engineering Student, Electrical Focus">
+<meta property="og:description" content="Engineering student with an electrical focus at Iron Range Engineering, seeking a manufacturing internship or co-op.">
 <meta property="og:image" content="images/milling-equipment.jpg">
 <meta name="theme-color" content="#17324D">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,6 +143,44 @@ h1,h2,h3,h4{font-family:var(--f-head);color:var(--ink);font-weight:600;letter-sp
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes draw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
+
+/* ---------- Story additions ---------- */
+.hero .lead{font:500 clamp(18px,1.5vw,20px)/1.6 var(--f-head);color:var(--ink);letter-spacing:-.01em;margin-bottom:18px}
+.split-about > .frame{position:sticky;top:104px}
+.beyond{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.mini{font-size:18px;line-height:1.4;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.mini::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--accent);flex:none}
+.path{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:clamp(24px,4vw,64px);align-items:start}
+.path-head{position:sticky;top:120px}
+.path-head .slide-title{margin-bottom:28px}
+.path-photo{box-shadow:var(--shadow-img)}
+.r32{aspect-ratio:3/2}
+.path-steps{list-style:none;margin:0;padding:0;max-width:66ch}
+.path-steps li{position:relative;padding:0 0 36px 32px;border-left:1px solid var(--line);margin-left:5px}
+.path-steps li:last-child{padding-bottom:0;border-left-color:transparent}
+.path-steps li::before{content:"";position:absolute;left:-6px;top:.55em;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.path-steps h3{font-size:clamp(20px,1.8vw,24px);line-height:1.3;margin-bottom:10px}
+.path-steps p{margin:0}
+.how{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(16px,3vw,48px);margin-bottom:24px}
+@media (max-width:900px){
+  .path,.how{grid-template-columns:1fr}
+  .path-head,.split-about > .frame{position:static}
+}
+
+/* ---------- Consistent frames ---------- */
+.hero-copy.panel{padding:clamp(28px,3.4vw,48px)}
+.path{grid-template-columns:minmax(0,6fr) minmax(0,4fr)}
+.path-panel .slide-title{margin-bottom:32px}
+.path-media{position:sticky;top:120px}
+.showcase.card{padding:clamp(24px,3vw,40px)}
+@media (max-width:900px){
+  .path{grid-template-columns:1fr}
+  .path-media{position:static;order:-1}
+}
+
+/* Featured Project: text and photos in one frame, like the other projects */
+.split-proj.panel{gap:clamp(24px,3.5vw,48px)}
+.split-proj .gallery{top:120px}
 
 /* ---------- S2 / S3 split ---------- */
 .split{display:grid;gap:clamp(24px,3vw,40px);align-items:start}
@@ -313,10 +351,10 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
 
 <header class="hdr">
   <div class="bar">
-    <a class="brand" href="#home" data-go="home">Gia Nghi Nguyen</a>
+    <a class="brand" href="#home" data-go="home">Nghi Nguyen</a>
     <nav aria-label="Sections"><ul class="spy" id="spy"></ul></nav>
     <div class="hdr-right">
-      <span class="count" aria-live="polite"><span id="countNow">01</span> / 09</span>
+      <span class="count" aria-live="polite"><span id="countNow">01</span> / <span id="countTotal">10</span></span>
       <button class="btn btn-ghost btn-sm menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
       <ul class="menu" id="menu" aria-label="Sections"></ul>
       <a class="btn btn-primary btn-sm btn-contact" href="#contact" data-go="contact">Contact Me</a>
@@ -329,10 +367,11 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
 <!-- S1 -->
 <section class="slide" id="home" data-label="Home">
   <div class="wrap hero">
-    <div class="hero-copy">
-      <h1>Gia Nghi Nguyen</h1>
-      <p class="sub">Electrical Engineering Student | Interested in Manufacturing</p>
-      <p class="measure">I’m an engineering student with an electrical engineering focus at Minnesota State University, Mankato’s Iron Range Engineering program. My experience includes leading engineering projects, planning experiments, analyzing data, and building physical prototypes.</p>
+    <div class="hero-copy panel">
+      <h1>Nghi Nguyen</h1>
+      <p class="sub">Engineering Student, Electrical Focus | Interested in Manufacturing</p>
+      <p class="lead measure">I’ve always wanted to know how things work, and I learn best when I can see and try them for myself.</p>
+      <p class="measure">I’m an engineering student in Minnesota State University, Mankato’s Iron Range Engineering program, working toward a Bachelor of Science in Engineering, Electrical Focus. My experience includes student project management, experimental planning, data analysis, and building physical prototypes.</p>
       <p class="measure">I’m seeking a full-time engineering internship or co-op where I can contribute to manufacturing projects and gain practical experience with electrical systems and production equipment.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="#featured-project" data-go="featured-project">View My Projects</a>
@@ -342,7 +381,7 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
     </div>
     <div class="hero-media">
       <span class="scale" aria-hidden="true"></span>
-      <div class="frame r45"><img id="img-hero" src="images/hero-sieve-shaker.jpg" alt="Sieve shaker with a stack of mesh sieves, set up outdoors on campus" fetchpriority="high"></div>
+      <div class="frame r45"><img id="img-hero" src="images/hero-portrait.jpg" alt="Portrait of Nghi Nguyen" fetchpriority="high"><img id="img-sieve-outdoor" src="images/hero-sieve-shaker.jpg" alt="Sieve shaker with a stack of mesh sieves, set up outdoors on campus" loading="lazy" hidden></div>
     </div>
   </div>
 </section>
@@ -350,27 +389,58 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
 <!-- S2 -->
 <section class="slide" id="about" data-label="About Me">
   <div class="wrap split split-about">
-    <div class="frame r45"><img id="img-about" src="images/ore-samples.jpg" alt="Rock and ore samples with labeled sample jars on a lab shelf" loading="lazy"></div>
-    <div class="panel scrolly" tabindex="0" aria-label="About Me">
+    <div class="frame r45"><img id="img-about" src="images/graduation.jpg" alt="Nghi Nguyen at her Whatcom Community College graduation, holding her diploma cover" loading="lazy"></div>
+    <div class="panel">
       <h2 class="slide-title">About Me</h2>
       <div class="measure">
-        <p>I’m interested in how electrical engineering helps manufacturing equipment operate reliably and how measurements can guide process improvements.</p>
-        <p>Through project work, I’m learning to turn an open-ended problem into a clear plan, identify what needs to be measured, and use evidence to compare options. As project manager for Ultrasonic Milling for Legacy Iron, I coordinate team responsibilities, develop experimental plans, and organize technical information for client discussions.</p>
-        <p>Previously, I served as project manager and a design and testing team member on a science and technology project exploring paper production from the soft white inner peel of grapefruit.</p>
-        <p>I want to bring these experiences into a manufacturing environment while developing my knowledge of electrical controls and automation.</p>
+        <p>I grew up in Vietnam and moved to the United States to study engineering. I’m curious about the world around me, and I’m willing to start with things that feel unfamiliar, because that is usually where I learn the most.</p>
+        <p>At Iron Range Engineering, I’m focusing on electrical engineering. I’m especially interested in how electrical systems keep manufacturing equipment running reliably, and how careful measurements can show where a process could improve. My current student project, which compares ultrasonic and conventional ball milling for hematite ore, is teaching me to turn an open-ended question into a test plan and let the evidence guide the comparison.</p>
+        <p>Next, I want to bring that approach to a manufacturing team while I keep building my knowledge of electrical controls and automation.</p>
       </div>
+      <div class="beyond measure">
+        <h3 class="mini">Beyond Engineering</h3>
+        <p>Outside of class, I regularly follow new developments in technology, especially robotics and vehicle technology. To recharge, I play badminton and listen to music.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Path -->
+<section class="slide" id="my-path" data-label="My Path to Engineering">
+  <div class="wrap path">
+    <div class="panel path-panel">
+      <h2 class="slide-title">My Path to Engineering</h2>
+      <ol class="path-steps">
+      <li>
+        <h3>Learning from my father</h3>
+        <p>My father is a mechanical engineer, and he introduced me to engineering early. As a child, I helped him with some electrical repairs around our home and learned a lot by working alongside him. Those experiences sparked my interest in electricity and are part of why I chose an electrical focus.</p>
+      </li>
+      <li>
+        <h3>Moving to the United States</h3>
+        <p>Studying in the United States was not my first plan. I wanted to stay in Vietnam, close to my family and everything familiar. My father saw it differently. He knew I learn best through activities and direct experience, and he believed studying here would give me more of that. Because I hadn’t wanted to move, I also hadn’t prepared my English seriously.</p>
+      </li>
+      <li>
+        <h3>Learning in English</h3>
+        <p>When I arrived, English was my biggest challenge, and talking with people who didn’t speak Vietnamese was hard. I worked hard in my English classes. One early milestone still matters to me: my professor recognized how quickly I was progressing and allowed me to skip one English class and move to a higher level. I’m still improving, and I bring the same steady effort to engineering.</p>
+      </li>
+    </ol>
+    </div>
+    <div class="path-media">
+      <div class="frame r32 path-photo"><img src="images/family-graduation.jpg" alt="Nghi Nguyen with her family at her Whatcom Community College graduation" loading="lazy"></div>
     </div>
   </div>
 </section>
 
 <!-- S3 -->
 <section class="slide" id="featured-project" data-label="Featured Project">
-  <div class="wrap split split-proj">
-    <div class="panel scrolly" tabindex="0" aria-label="Featured Project">
+  <div class="wrap">
+  <div class="panel split split-proj">
+    <div class="proj-text">
       <h2 class="slide-title">Featured Project</h2>
       <div class="proj-head">
-        <h3>Ultrasonic Milling for Legacy Iron</h3>
-        <p class="meta">Project Manager | September 2026–Present</p>
+        <h3>Ultrasonic Milling Industry Design Project</h3>
+        <p class="meta">Student Project Manager | September 2026–Present</p>
+        <p class="meta">Student engineering project for North American Iron / Calumet Reclamation Company | Iron Range Engineering</p>
       </div>
       <div class="blk measure">
         <h4>The engineering question</h4>
@@ -379,7 +449,7 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
       <div class="blk measure">
         <h4>My contribution</h4>
         <ul class="ticks">
-          <li>Lead a five-person team, coordinating project scope, responsibilities, client questions, and technical deliverables.</li>
+          <li>Lead a five-person student team, coordinating project scope, responsibilities, client questions, and technical deliverables.</li>
           <li>Develop an experimental plan around solids concentration, flow rate, and exposure time.</li>
           <li>Plan particle-size comparisons using sieve analysis and mass measurements.</li>
           <li>Organize test data and engineering comparisons in Microsoft Excel, including considerations around recirculation and energy use.</li>
@@ -398,10 +468,11 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
       </div>
     </div>
     <div class="gallery">
-      <button class="wide" type="button" data-shot="0" aria-label="Open project photo 1 of 5"><div class="frame r43"><img id="img-mill" src="images/milling-equipment.jpg" alt="Milling equipment with cabling and generator units in the project workshop" loading="lazy"></div></button>
-      <button type="button" data-shot="1" aria-label="Open project photo 2 of 5"><div class="frame r11"><img id="img-sieve" src="images/sieve-analysis.jpg" alt="Sieve shaker with a sieve stack in the workshop" loading="lazy"></div></button>
-      <button type="button" data-shot="2" aria-label="Open project photo 3 of 5"><div class="frame r11"><img id="img-ore" src="images/ore-in-tank.jpg" alt="Ore material inside a container" loading="lazy"></div></button>
+      <button class="wide" type="button" data-shot="0" aria-label="Open project photo 1 of 4"><div class="frame r43"><img id="img-mill" src="images/milling-equipment.jpg" alt="Milling equipment with cabling and generator units in the project workshop" loading="lazy"></div></button>
+      <button type="button" data-shot="1" aria-label="Open project photo 2 of 4"><div class="frame r11"><img id="img-sieve" src="images/sieve-analysis.jpg" alt="Sieve shaker with a sieve stack in the workshop" loading="lazy"></div></button>
+      <button type="button" data-shot="2" aria-label="Open project photo 3 of 4"><div class="frame r11"><img id="img-ore" src="images/ore-in-tank.jpg" alt="Ore material inside a container" loading="lazy"></div></button>
     </div>
+  </div>
   </div>
 </section>
 
@@ -409,7 +480,7 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
 <section class="slide" id="additional-projects" data-label="Additional Projects">
   <div class="wrap">
     <h2 class="slide-title">Additional Projects</h2>
-    <div class="showcase">
+    <div class="showcase card">
       <div>
         <h3>Paper Production from Grapefruit Peel</h3>
         <p class="meta">Science and Technology Project | Project Manager &amp; Design and Testing Team Member</p>
@@ -480,6 +551,14 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
 <section class="slide" id="leadership" data-label="Leadership Experience">
   <div class="wrap">
     <h2 class="slide-title">Leadership Experience</h2>
+    <div class="card how">
+      <h3 class="card-title">How I Work With Others</h3>
+      <div class="measure">
+        <p>I was class president for many years, from elementary school through high school. Much of that role was listening. I passed questions and concerns between my classmates and our teachers so each side understood the other.</p>
+        <p>I also enjoyed bringing the class together. I organized activities to show appreciation for the boys in our class, and activities for Vietnamese Teachers’ Day to thank our teachers.</p>
+        <p>Today, I bring the same energy to teams. I like meeting new people, I listen before I suggest a plan, and once we set a goal, I keep working toward it.</p>
+      </div>
+    </div>
     <div class="twin">
       <article class="card">
         <div class="frame r43 doc"><img src="images/senate-certificate.jpg" alt="Certificate of Leadership awarded to Nghi Nguyen for representation and decision making on the ASWCC Senate at Whatcom Community College" loading="lazy"></div>
@@ -510,7 +589,7 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
         <span class="mono" aria-hidden="true">MNSU</span>
         <div>
           <h3 class="card-title">Minnesota State University, Mankato</h3>
-          <p class="meta">Iron Range Engineering | Electrical Engineering Focus</p>
+          <p class="meta">Iron Range Engineering | Bachelor of Science in Engineering, Electrical Focus</p>
           <p class="dates">August 2026–Present</p>
           <p>Relevant coursework: Fluid Mechanics, Engineering Economics, and Project Management.</p>
         </div>
@@ -531,10 +610,10 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
 <section class="slide" id="contact" data-label="Let’s Connect">
   <div class="wrap">
     <div class="deep">
-      <div class="frame"><img src="images/portrait.jpg" alt="Portrait of Gia Nghi Nguyen in front of an Iron Range Engineering backdrop" loading="lazy"></div>
+      <div class="frame"><img src="images/portrait.jpg" alt="Portrait of Nghi Nguyen in front of an Iron Range Engineering backdrop" loading="lazy"></div>
       <div class="deep-copy">
         <h2>Let’s Connect</h2>
-        <p>I’m seeking a full-time electrical engineering or manufacturing engineering internship or co-op, with opportunities to support testing, equipment, and process improvement.</p>
+        <p>I’m seeking an electrical or manufacturing engineering internship or co-op, with opportunities to support testing, equipment, and process improvement. I’m available full-time, up to 40 hours per week.</p>
         <p>I bring experience coordinating technical work, organizing data, and building prototypes. I’m ready to contribute those skills while learning from engineers and production teams.</p>
         <ul class="contact-list">
           <li>Email: <a class="email-link" href="mailto:nghiivy2907@gmail.com?subject=Internship%20opportunity" aria-haspopup="dialog">nghiivy2907@gmail.com</a></li>
@@ -549,11 +628,11 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
   </div>
 </section>
 </main>
-<footer>© 2026 Gia Nghi Nguyen</footer>
+<footer>© 2026 Nghi Nguyen</footer>
 
 <dialog class="em" id="em" aria-labelledby="emTitle">
   <div class="em-head">
-    <h2 id="emTitle">Email Gia Nghi</h2>
+    <h2 id="emTitle">Email Nghi</h2>
     <button class="em-x" id="emClose" type="button" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
   <p class="em-note">Copy the address, or open a new email in the app you use.</p>
@@ -583,7 +662,7 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
   </div>
 </dialog>
 
-<dialog class="lb" id="lb" aria-label="Ultrasonic Milling for Legacy Iron project photos">
+<dialog class="lb" id="lb" aria-label="Ultrasonic Milling Industry Design Project photos">
   <img class="lb-img" id="lbImg" src="" alt="">
   <div class="lb-bar">
     <span class="n"><span id="lbN">1</span> / <span id="lbT">5</span></span>
@@ -685,6 +764,7 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
     spyBtns.forEach(function(b, i){ b.setAttribute('aria-current', i === idx ? 'true' : 'false'); });
     menuBtns.forEach(function(b, i){ b.setAttribute('aria-current', i === idx ? 'true' : 'false'); });
     countNow.textContent = pad(idx + 1);
+    document.getElementById('countTotal').textContent = pad(sections.length);
   }
   window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(update); } }, {passive:true});
   window.addEventListener('resize', update);
@@ -696,7 +776,7 @@ dialog.rd :focus-visible{outline-color:var(--accent)}
   }
 
   /* Project photo viewer */
-  var shots = ['img-mill','img-sieve','img-ore','img-hero','img-about'].map(function(id){ return document.getElementById(id); });
+  var shots = ['img-mill','img-sieve','img-ore','img-sieve-outdoor'].map(function(id){ return document.getElementById(id); });
   var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbN = document.getElementById('lbN');
   document.getElementById('lbT').textContent = shots.length;
   var at = 0, opener = null;
